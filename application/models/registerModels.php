@@ -3,7 +3,7 @@ class registerModels extends CI_Model{
 	
 	//构造函数--直接执行：
 	function registerModels(){
-		//数据库对象连接数据库：
+		//数据库对象连接数据库：123
 		$this->load->database();    
 	}
 	
