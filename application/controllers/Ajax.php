@@ -22,7 +22,7 @@ class Ajax extends CI_Controller{
 
             //1，从url地址里面取出参数
             $params = $this->uri->uri_to_assoc();
-            $name='666';
+            $name='777';
             //判断参数数组里面是否有name
             if (!empty($params['name'])){
                 $name = $params['name'];
