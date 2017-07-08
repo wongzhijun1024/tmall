@@ -30,7 +30,7 @@ class Ajax extends CI_Controller{
                 $name = iconv('gb2312','utf8',$name);
             }
 
-            echo "hello".$name;
+            echo "hello6666666666666666666666".$name;
         }
 
 }
