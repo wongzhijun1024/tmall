@@ -35,5 +35,5 @@ function submit1() {
 
 function fm() {
     console.log($(".min am-btn"))
-    console.log(1234567);
+    console.log(12345678);
 }
