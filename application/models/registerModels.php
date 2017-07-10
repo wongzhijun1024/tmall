@@ -9,7 +9,7 @@ class registerModels extends CI_Model{
 	
 
 	function insertdata($name,$passwd){
-        $sql = 'insert into user(name,passwd)values("'.$name.'","'.$passwd.'")';
+        $sql = 'insert into menbers(name,passwd)values("'.$name.'","'.$passwd.'")';
         $query = $this->db->query($sql);
         echo $query;
     }
