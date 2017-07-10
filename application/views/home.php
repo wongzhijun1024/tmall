@@ -874,8 +874,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!--今日推荐 -->
 
         <div class="am-g am-g-fixed recommendation">
-            <div class="clock am-u-sm-3"
-            ">
+            <div class="clock am-u-sm-3">
             <img src="<?php echo base_url() ?>/images/2016.png ">
             <p>今日<br>推荐</p>
         </div>
