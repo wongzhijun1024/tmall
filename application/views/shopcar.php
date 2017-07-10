@@ -101,7 +101,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
         <div class="clear"></div>
-
+        <?php
+        foreach ($shop as $value){
+        echo '
         <tr class="item-list">
             <div class="bundle  bundle-last ">
                 <div class="bundle-hd">
@@ -129,13 +131,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div class="item-info">
                                 <div class="item-basic-info">
-                                    <a href="#" target="_blank" title="美康粉黛醉美唇膏 持久保湿滋润防水不掉色" class="item-title J_MakePoint" data-point="tbcart.8.11">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</a>
+                                    <a href="#" target="_blank" title="美康粉黛醉美唇膏 持久保湿滋润防水不掉色" class="item-title J_MakePoint" data-point="tbcart.8.11">'.$value['name'].'</a>
                                 </div>
                             </div>
                         </li>
                         <li class="td td-info">
                             <div class="item-props item-props-can">
-                                <span class="sku-line">颜色：12#川南玛瑙</span>
+                                <span class="sku-line">'.$value['str'].'</span>
                                 <span class="sku-line">包装：裸装</span>
                                 <span tabindex="0" class="btn-edit-sku theme-login">修改</span>
                                 <i class="theme-login am-icon-sort-desc"></i>
@@ -148,7 +150,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <em class="price-original">78.00</em>
                                     </div>
                                     <div class="price-line">
-                                        <em class="J_Price price-now" tabindex="0">39.00</em>
+                                        <em class="J_Price price-now" tabindex="0">'.$value['price'].'</em>
                                     </div>
                                 </div>
                             </div>
@@ -156,10 +158,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <li class="td td-amount">
                             <div class="amount-wrapper ">
                                 <div class="item-amount ">
-                                    <div class="sl">
-                                        <input class="min am-btn" name="" type="button" value="-" onmouseout="fm()"/>
-                                        <input class="text_box" name="" type="text" value="3" style="width:30px;" />
-                                        <input class="add am-btn" name="" type="button" value="+" onmouseout="fm()"/>
+                                    <div class="sl" id="good_number" onclick="fm()">
+                                        <input class="min am-btn" name="" type="button" value="-" />
+                                        <input class="text_box" name="" type="text" value="'.$value['num'].'" style="width:30px;" />
+                                        <input class="add am-btn" name="" type="button" value="+" />
                                     </div>
                                 </div>
                             </div>
@@ -181,6 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </tr>
+';}?>
         <div class="clear"></div>
     </div>
 
@@ -258,7 +261,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="theme-signin-left">
 
                 <li class="theme-options">
-                    <div class="cart-title">颜色：</div>
+                    <div class="cart-title">颜色1：</div>
                     <ul>
                         <li class="sku-line selected">12#川南玛瑙<i></i></li>
                         <li class="sku-line">10#蜜橘色+17#樱花粉<i></i></li>
