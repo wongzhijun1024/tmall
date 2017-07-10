@@ -6,11 +6,13 @@ class shopcarcontrollers extends CI_Controller {
     {
         parent::__construct();////
         $this->load->helper('url');
-
+        $this->load->model('shopcarModels');
     }
 
 	 function index()
-	{
-		$this->load->view('shopcar');
+	{ //调用getSinger()方法，获得的值放在名为$data的函数内：
+        $data['shop'] = $this->shopcarModels->getShopingcardata();
+        //添加名为:view的类库，将$data数据发送到news.php文件:
+		$this->load->view('shopcar',$data);
 	}
 }
