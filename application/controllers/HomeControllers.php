@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class homecontrollers extends CI_Controller {
+class HomeControllers extends CI_Controller {
     //构造函数：
-    function homecontrollers(){
+    function HomeControllers(){
         //继承父类的方法，这里父类是框架定义好的：
         parent::__construct();
         //添加名叫helper的类库：
