@@ -116,7 +116,7 @@ $.ajax({
       	username:name, 
         passwd:passwd
             
-            },       //要发送的数据
+            },       //要发送的数据1
         type:"POST",           //发送的方式
         url:url, //url地址
         error:function(msg){ //处理出错的信息
