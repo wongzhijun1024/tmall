@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class shopcarcontrollers extends CI_Controller {
-    function shopcarcontrollers()
+class ShopcarControllers extends CI_Controller {
+    function ShopcarControllers()
     {
         parent::__construct();////
         $this->load->helper('url');
