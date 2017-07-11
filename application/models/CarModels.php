@@ -1,6 +1,6 @@
 <?php
-class updataCarModels extends CI_Model{
-    function updataCarModels(){
+class CarModels extends CI_Model{
+    function CarModels(){
         $this->load->database();
     }
     function getprice($id){
