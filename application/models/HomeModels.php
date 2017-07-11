@@ -1,9 +1,9 @@
 <?php
-class homeModels extends CI_Model
+class HomeModels extends CI_Model
 {
 
     //构造函数--直接执行：
-    function homeModels()
+    function HomeModels()
     {
         //数据库对象连接数据库：
         $this->load->database();
