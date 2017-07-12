@@ -21,5 +21,11 @@ class HomeControllers extends CI_Controller {
         $this->load->view('home',$data);
     }
 
+    function search(){
+        $data['shopsearch'] = $this->homeModels->getsearch();
+
+        $this->load->view('search',$data);
+    }
+
 }
 

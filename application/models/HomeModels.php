@@ -12,11 +12,13 @@ class HomeModels extends CI_Model
 
     function getshop()
     {
-
         $query = $this->db->query('SELECT * from index_produce');
         // 将接收的数据以数组形式返回：
         return $query->result_array();
-//        echo ($query->result_array());
+    }
 
+    function getsearch(){
+        $query = $this->db->query('SELECT * from index_search');
+        return $query->result_array();
     }
 }
