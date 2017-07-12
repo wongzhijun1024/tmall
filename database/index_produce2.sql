@@ -40,8 +40,8 @@ CREATE TABLE `index_produce2` (
 --
 
 INSERT INTO `index_produce2` (`id`, `name`, `name2`, `price`, `oldprice`, `imgid`) VALUES
-(1, '雪之恋和风大福', '良品铺子 和风大福 绝版美味 一饱口福', '￥13.8', '￥100', '8'),
-(2, '小优布丁', 'emmmm..就是好吃 小优布丁', '￥4.8', '￥200', '9');
+(1, '雪之恋和风大福', '良品铺子 和风大福 绝版美味 一饱口福', '13.8', '100', '8'),
+(2, '小优布丁', 'emmmm..就是好吃 小优布丁', '4.8', '200', '9');
 
 --
 -- Indexes for dumped tables

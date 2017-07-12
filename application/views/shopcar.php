@@ -16,14 +16,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>购物车页面</title>
 
-    <link href="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url() ?>/basic/css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url() ?>/css/cartstyle.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url() ?>/css/optstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url()?>/css/assets/css/amazeui.css" type="text/css" rel="stylesheet">
+    <link href="<? echo base_url()?>/css/basic/css/demo.css" type="text/css" rel="stylesheet">
+    <link href="<? echo base_url() ?>/css/css/cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url() ?>/css/css/optstyle.css" rel="stylesheet" type="text/css" />
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>/js/shopcarjs.js"></script>
-        <script type="text/javascript" src="<?php echo base_url() ?>/js/jquery.js"></script>
+    <script type="text/javascript" src="<? echo base_url() ?>/css/js/shopcarjs.js"></script>
+    <script type="text/javascript" src="<? echo base_url() ?>/css/js/jquery.js"></script>
 
 </head>
 
@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="clear"></div>
         <?php
         foreach ($shop as $value){
-        echo '
+            echo '
         <tr class="item-list">
             <div class="bundle  bundle-last ">
                 <div class="bundle-hd">
@@ -148,6 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="price-content">
                                     <div class="price-line">
                                         <em class="price-original">78.00</em>
+                                        <p style="display: block" id="goodsid">'.$value['id'].'</p>
                                     </div>
                                     <div class="price-line">
                                         <em class="J_Price price-now" tabindex="0">'.$value['price'].'</em>
@@ -168,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </li>
                         <li class="td td-sum">
                             <div class="td-inner">
-                                <em tabindex="0" class="J_ItemSum number">117.00</em>
+                                <em tabindex="0" class="J_ItemSum number" id="total_price">170</em>
                             </div>
                         </li>
                         <li class="td td-op">
@@ -311,6 +312,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <li class="active"><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
     <li><a href="<?php echo base_url() ?>/person/index.html"><i class="am-icon-user"></i>我的</a></li>
 </div>
+<script type="text/javascript">
+    var url2 = "<?php echo site_url('shopcarcontrollers/getAjaxData')?>";
+</script>
 </body>
 
 </html>

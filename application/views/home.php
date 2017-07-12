@@ -13,18 +13,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>首页</title>
 
-    <link href="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css"/>
+    <link href="<? echo base_url()?>/css/assets/css/amazeui.css" type="text/css" rel="stylesheet">
+    <link href="<? echo base_url()?>/css/assets/css/admin.css" type="text/css" rel="stylesheet">
+    <link href="<? echo base_url()?>/css/basic/css/demo.css" type="text/css" rel="stylesheet">
 
-    <link href="<?php echo base_url() ?>/basic/css/demo.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url() ?>/css/css/hmstyle.css" rel="stylesheet" type="text/css"/>
 
-    <link href="<?php echo base_url() ?>/css/hmstyle.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo base_url() ?>/css/skin.css" rel="stylesheet" type="text/css"/>
-    <script src="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+    <link href="<?php echo base_url() ?>/css/css/skin.css" rel="stylesheet" type="text/css"/>
+    <script src="<?php echo base_url() ?>/css/assets/js/jquery.min.js"></script>
+    <script src="<?php echo base_url() ?>/css/assets/js/amazeui.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>/js/shopcarjs.js"></script>
+    <script src="<? echo base_url()?>/css/basic/js/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="<? echo base_url()?>/css/basic/js/quick_links.js" type="text/javascript"></script>
 
 </head>
 
@@ -71,10 +73,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="search-bar pr">
             <form  method="post" id="searchform">
                 <input id="searchInput"   type="text" placeholder="搜索"  >
-                <input id="ai-topsearch"  value="搜索" index="1" type="button" onclick="submit1()">
+                <input id="ai-topsearch"  value="搜索" index="1" type="button" onclick="submit12()">
             </form>
         </div>
     </div>
+    <script>
+        function submit12() {
+            var url = "<?php echo site_url('homecontrollers/search')?>";
+            window.location.href = url;
+        }
+
+    </script>
 
     <div class="clear"></div>
 </div>
@@ -99,10 +108,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="nav-cont">
             <ul>
                 <li class="index"><a href="#">首页</a></li>
-                <li class="qc"><a href="#">闪购</a></li>
-                <li class="qc"><a href="#">限时抢</a></li>
-                <li class="qc"><a href="#">团购</a></li>
-                <li class="qc last"><a href="#">大包装</a></li>
+                <li class="qc navli"><a href="#">闪购</a></li>
+                <li class="qc navli"><a href="#">限时抢</a></li>
+                <li class="qc navli"><a href="#">团购</a></li>
+                <li class="qc last navli" ><a href="#">大包装</a></li>
+                <script>
+                    $(".navli").click(function () {
+                        var url = "<?php echo site_url('homecontrollers/search')?>";
+                        window.location.href = url;
+                    });
+
+                </script>
             </ul>
             <div class="nav-extra">
                 <i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
@@ -384,15 +400,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="area-in">
                                         <div class="area-bg">
                                             <div class="menu-srot">
-                                                <div class="sort-side">
+                                                <div class="sort-side" id="sortdiv">
                                                     <dl class="dl-sort">
                                                         <dt><span title="蛋糕">坚果</span></dt>
-                                                        <dd><a title="蒸蛋糕" href="#"><span>蒸蛋糕</span></a></dd>
-                                                        <dd><a title="脱水蛋糕" href="#"><span>脱水蛋糕</span></a></dd>
-                                                        <dd><a title="瑞士卷" href="#"><span>瑞士卷</span></a></dd>
-                                                        <dd><a title="软面包" href="#"><span>软面包</span></a></dd>
-                                                        <dd><a title="马卡龙" href="#"><span>马卡龙</span></a></dd>
-                                                        <dd><a title="千层饼" href="#"><span>千层饼</span></a></dd>
+                                                        <dd><a title="蒸蛋糕" href="#"><span>坚果</span></a></dd>
+                                                        <dd><a title="脱水蛋糕" href="#"><span>瓜子</span></a></dd>
+                                                        <dd><a title="瑞士卷" href="#"><span>松子</span></a></dd>
+                                                        <dd><a title="软面包" href="#"><span>开心果</span></a></dd>
+                                                        <dd><a title="马卡龙" href="#"><span>樽子</span></a></dd>
+                                                        <dd><a title="千层饼" href="#"><span>美国大杏仁</span></a></dd>
                                                         <dd><a title="甜甜圈" href="#"><span>甜甜圈</span></a></dd>
                                                         <dd><a title="蒸三明治" href="#"><span>蒸三明治</span></a></dd>
                                                         <dd><a title="铜锣烧" href="#"><span>铜锣烧</span></a></dd>
@@ -410,10 +426,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <dd><a title="铜锣烧" href="#"><span>铜锣烧</span></a></dd>
                                                     </dl>
                                                 </div>
+                                                <script>
+                                                    $("#sortdiv").delegate("a","click",function (){
+                                                        var url = "<?php echo site_url('homecontrollers/search')?>";
+                                                        window.location.href = url;
+                                                    });
+
+                                                </script>
+
                                                 <div class="brand-side">
                                                     <dl class="dl-sort">
                                                         <dt><span>实力商家</span></dt>
-                                                        <dd><a rel="nofollow" title="呵呵嘿官方旗舰店" target="_blank" href="#"
+                                                        <dd><a rel="nofollow" title="ADIDAS官方旗舰店" target="_blank" href="#"
                                                                rel="nofollow"><span class="red">呵呵嘿官方旗舰店</span></a></dd>
                                                         <dd><a rel="nofollow" title="格瑞旗舰店" target="_blank" href="#"
                                                                rel="nofollow"><span>格瑞旗舰店</span></a></dd>
@@ -432,6 +456,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     </dl>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -887,9 +912,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h3>'.$value['name'].'</h3>
                 <h4>'.$value['name2'].'</h4>
             </div>
-            <div class="recommendationMain one">
+            <div class="recommendationMain one" id="maindiv">
                 <a href="introduction.html"><img src="'.$url.$value['price'].'"></img></a>
             </div>
+
+            
         </div>
 ';} ?>
     </div>

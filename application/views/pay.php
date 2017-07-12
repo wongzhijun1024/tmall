@@ -13,18 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>结算页面</title>
 
-    <link href="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url()?>/css/assets/css/admin.css" type="text/css" rel="stylesheet">
 
-    <link href="<?php echo base_url() ?>/basic/css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url() ?>/css/cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url()?>/css/basic/css/demo.css" type="text/css" rel="stylesheet">
+    <link href="<? echo base_url() ?>/css/css/cartstyle.css" rel="stylesheet" type="text/css" />
 
-    <link href="<?php echo base_url() ?>/css/jsstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url() ?>/css/css/jsstyle.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="<?php echo base_url() ?>/js/address.js"></script>
+    <script type="text/javascript" src="<? echo base_url() ?>/css/js/address.js"></script>
 
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>/js/shopcarjs.js"></script>
+    <script type="text/javascript" src="<? echo base_url() ?>/css/js/shopcarjs.js"></script>
 
 </head>
 
@@ -83,83 +83,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="clear"></div>
             <ul>
-                <div class="per-border"></div>
-                <li class="user-addresslist defaultAddr">
+                <?php
 
-                    <div class="address-left">
-                        <div class="user DefaultAddr">
+               foreach ($shop as $value) {
+                   echo '
+                   div class="per-border" ></div >
+                <li class="user-addresslist" >
+                    <div class="address-left" >
+                        <div class="user DefaultAddr" >
 
-										<span class="buy-address-detail">
-                   <span class="buy-user">艾迪 </span>
-										<span class="buy-phone">15871145629</span>
-										</span>
-                        </div>
-                        <div class="default-address DefaultAddr">
-                            <span class="buy-line-title buy-line-title-type">收货地址：</span>
-                            <span class="buy--address-detail">
-								   <span class="province">湖北</span>省
-										<span class="city">武汉</span>市
-										<span class="dist">洪山</span>区
-										<span class="street">雄楚大道666号(中南财经政法大学)</span>
-										</span>
+										<span class="buy-address-detail" >
+                   <span class="buy-user" > 艾迪 </span >
+										<span class="buy-phone" > 15871145629</span >
+										</span >
+                        </div >
+                        <div class="default-address DefaultAddr" >
+                            <span class="buy-line-title buy-line-title-type" > 收货地址：</span >
+                            <span class="buy--address-detail" >
+								   <span class="province" > 湖北</span > 省
+										<span class="city" > 武汉</span > 市
+										<span class="dist" > 武昌</span > 区
+										<span class="street" > 东湖路75号众环大厦2栋9层902</span >
+										</span >
 
-                            </span>
-                        </div>
-                        <ins class="deftip">默认地址</ins>
-                    </div>
-                    <div class="address-right">
-                        <a href="<?php echo base_url() ?>/person/address.html">
-                            <span class="am-icon-angle-right am-icon-lg"></span></a>
-                    </div>
-                    <div class="clear"></div>
+                            </span >
+                        </div >
+                        <ins class="deftip hidden" > 默认地址</ins >
+                    </div >
+                    <div class="address-right" >
+                        <span class="am-icon-angle-right am-icon-lg" ></span >
+                    </div >
+                    <div class="clear" ></div >
 
-                    <div class="new-addr-btn">
-                        <a href="#" class="hidden">设为默认</a>
-                        <span class="new-addr-bar hidden">|</span>
-                        <a href="#">编辑</a>
-                        <span class="new-addr-bar">|</span>
-                        <a href="javascript:void(0);" onclick="delClick(this);">删除</a>
-                    </div>
+                    <div class="new-addr-btn" >
+                        <a href = "#" > 设为默认</a >
+                        <span class="new-addr-bar" >|</span >
+                        <a href = "#" > 编辑</a >
+                        <span class="new-addr-bar" >|</span >
+                        <a href = "javascript:void(0);"  onclick = "delClick(this);" > 删除</a >
+                    </div >
 
-                </li>
-                <div class="per-border"></div>
-                <li class="user-addresslist">
-                    <div class="address-left">
-                        <div class="user DefaultAddr">
-
-										<span class="buy-address-detail">
-                   <span class="buy-user">艾迪 </span>
-										<span class="buy-phone">15871145629</span>
-										</span>
-                        </div>
-                        <div class="default-address DefaultAddr">
-                            <span class="buy-line-title buy-line-title-type">收货地址：</span>
-                            <span class="buy--address-detail">
-								   <span class="province">湖北</span>省
-										<span class="city">武汉</span>市
-										<span class="dist">武昌</span>区
-										<span class="street">东湖路75号众环大厦2栋9层902</span>
-										</span>
-
-                            </span>
-                        </div>
-                        <ins class="deftip hidden">默认地址</ins>
-                    </div>
-                    <div class="address-right">
-                        <span class="am-icon-angle-right am-icon-lg"></span>
-                    </div>
-                    <div class="clear"></div>
-
-                    <div class="new-addr-btn">
-                        <a href="#">设为默认</a>
-                        <span class="new-addr-bar">|</span>
-                        <a href="#">编辑</a>
-                        <span class="new-addr-bar">|</span>
-                        <a href="javascript:void(0);"  onclick="delClick(this);">删除</a>
-                    </div>
-
-                </li>
-
+                </li >
+';}?>
             </ul>
 
             <div class="clear"></div>
@@ -213,8 +178,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </div>
                 </div>
+                <?php
+                foreach ($shop as $value){
+                echo '
                 <div class="clear"></div>
-
                 <tr class="item-list">
                     <div class="bundle  bundle-last">
 
@@ -228,20 +195,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                         <div class="item-info">
                                             <div class="item-basic-info">
-                                                <a href="#" class="item-title J_MakePoint" data-point="tbcart.8.11">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</a>
+                                                <a href="#" class="item-title J_MakePoint" data-point="tbcart.8.11">'.$value['name'].'</a>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="td td-info">
                                         <div class="item-props">
-                                            <span class="sku-line">颜色：12#川南玛瑙</span>
+                                            <span class="sku-line">'.$value['name'].'</span>
                                             <span class="sku-line">包装：裸装</span>
                                         </div>
                                     </li>
                                     <li class="td td-price">
                                         <div class="item-price price-promo-promo">
                                             <div class="price-content">
-                                                <em class="J_Price price-now">39.00</em>
+                                                <em class="J_Price price-now">'.$value['price'].'</em>
                                             </div>
                                         </div>
                                     </li>
@@ -277,71 +244,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         </div>
                 </tr>
+';}?>
                 <div class="clear"></div>
             </div>
-
-            <tr id="J_BundleList_s_1911116345_1" class="item-list">
-                <div id="J_Bundle_s_1911116345_1_0" class="bundle  bundle-last">
-                    <div class="bundle-main">
-                        <ul class="item-content clearfix">
-                            <div class="pay-phone">
-                                <li class="td td-item">
-                                    <div class="item-pic">
-                                        <a href="#" class="J_MakePoint">
-                                            <img src="<?php echo base_url() ?>/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg"></a>
-                                    </div>
-                                    <div class="item-info">
-                                        <div class="item-basic-info">
-                                            <a href="#" target="_blank" title="美康粉黛醉美唇膏 持久保湿滋润防水不掉色" class="item-title J_MakePoint" data-point="tbcart.8.11">美康粉黛醉美唇膏 持久保湿滋润防水不掉色</a>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="td td-info">
-                                    <div class="item-props">
-                                        <span class="sku-line">颜色：10#蜜橘色+17#樱花粉</span>
-                                        <span class="sku-line">包装：两支手袋装（送彩带）</span>
-                                    </div>
-                                </li>
-                                <li class="td td-price">
-                                    <div class="item-price price-promo-promo">
-                                        <div class="price-content">
-                                            <em class="J_Price price-now">39.00</em>
-                                        </div>
-                                    </div>
-                                </li>
-                            </div>
-
-                            <li class="td td-amount">
-                                <div class="amount-wrapper ">
-                                    <div class="item-amount ">
-                                        <span class="phone-title">购买数量</span>
-                                        <div class="sl">
-                                            <input class="min am-btn" name="" type="button" value="-" />
-                                            <input class="text_box" name="" type="text" value="3" style="width:30px;" />
-                                            <input class="add am-btn" name="" type="button" value="+" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="td td-sum">
-                                <div class="td-inner">
-                                    <em tabindex="0" class="J_ItemSum number">117.00</em>
-                                </div>
-                            </li>
-                            <li class="td td-oplist">
-                                <div class="td-inner">
-                                    <span class="phone-title">配送方式</span>
-                                    <div class="pay-logis">
-                                        包邮
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                        <div class="clear"></div>
-
-                    </div>
-            </tr>
         </div>
         <div class="clear"></div>
         <div class="pay-total">
@@ -514,17 +419,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="am-form-group">
                 <label for="user-phone" class="am-form-label">所在地</label>
                 <div class="am-form-content address">
-                    <select data-am-selected>
-                        <option value="a">浙江省</option>
-                        <option value="b">湖北省</option>
+                    <select data-am-selected id="provinces" name="select1">
+                        <option value="浙江省">浙江省</option>
+                        <option value="湖北省">湖北省</option>
                     </select>
-                    <select data-am-selected>
-                        <option value="a">温州市</option>
-                        <option value="b">武汉市</option>
+                    <select data-am-selected id="city" name="select2">
+                        <option value="温州市">温州市</option>
+                        <option value="武汉市">武汉市</option>
                     </select>
-                    <select data-am-selected>
-                        <option value="a">瑞安区</option>
-                        <option value="b">洪山区</option>
+                    <select data-am-selected id="county" name="select3">
+                        <option value="瑞安区">瑞安区</option>
+                        <option value="洪山区">洪山区</option>
                     </select>
                 </div>
             </div>
@@ -533,13 +438,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <label for="user-intro" class="am-form-label">详细地址</label>
                 <div class="am-form-content">
                     <textarea class="" rows="3" id="user-intro" placeholder="输入详细地址"></textarea>
-                    <small>100字以内写出你的详细地址<?php echo base_url() ?>.</small>
+                    <small>100字以内写出你的详细地址</small>
                 </div>
             </div>
 
             <div class="am-form-group theme-poptit">
                 <div class="am-u-sm-9 am-u-sm-push-3">
-                    <div class="am-btn am-btn-danger">保存</div>
+                    <div class="am-btn am-btn-danger" onclick="seave()">保存</div>
                     <div class="am-btn am-btn-danger close">取消</div>
                 </div>
             </div>
