@@ -10,6 +10,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="stylesheet" href="<?php echo base_url() ?>css/page2css.css" type="text/css">
 </head>
 <body>
-<h1>商品详细</h1>
+<h1>商品搜索</h1>
 </body>
 </html>
