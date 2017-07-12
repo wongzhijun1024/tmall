@@ -1,9 +1,9 @@
 <?php
-class fashionModels extends CI_Model
+class FashionModels extends CI_Model
 {
 
     //构造函数--直接执行：
-    function fashionModels()
+    function FashionModels()
     {
         //数据库对象连接数据库：
         $this->load->database();

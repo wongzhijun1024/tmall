@@ -1,8 +1,8 @@
 <?php
-class shopcarModels extends CI_Model{
+class ShopcarModels extends CI_Model{
 	
 	//构造函数--直接执行：
-	function shopcarModels(){
+	function ShopcarModels(){
 		//数据库对象连接数据库：
 		$this->load->database();    
 	}

@@ -1,6 +1,6 @@
 <?php
-class SingerModel extends CI_Model{
-    function SingerModel(){
+class SingerModels extends CI_Model{
+    function SingerModels(){
         $this->load->database();
 
     }
