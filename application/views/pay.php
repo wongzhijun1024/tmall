@@ -13,18 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <title>结算页面</title>
 
-    <link href="<?php echo base_url() ?>/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url()?>/css/assets/css/admin.css" type="text/css" rel="stylesheet">
 
-    <link href="<?php echo base_url() ?>/basic/css/demo.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url() ?>/css/cartstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url()?>/css/basic/css/demo.css" type="text/css" rel="stylesheet">
+    <link href="<? echo base_url() ?>/css/css/cartstyle.css" rel="stylesheet" type="text/css" />
 
-    <link href="<?php echo base_url() ?>/css/jsstyle.css" rel="stylesheet" type="text/css" />
+    <link href="<? echo base_url() ?>/css/css/jsstyle.css" rel="stylesheet" type="text/css" />
 
-    <script type="text/javascript" src="<?php echo base_url() ?>/js/address.js"></script>
+    <script type="text/javascript" src="<? echo base_url() ?>/css/js/address.js"></script>
 
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?php echo base_url() ?>/js/shopcarjs.js"></script>
+    <script type="text/javascript" src="<? echo base_url() ?>/css/js/shopcarjs.js"></script>
 
 </head>
 

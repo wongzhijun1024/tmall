@@ -13,7 +13,7 @@ class shopingcarController extends CI_Controller {
 	}
 	
 	function index(){
-        $this->load->view('shopingcar');
+        $this->load->view('pay');
 	}
 
 //    function insert( $name, $price, $str, $num)

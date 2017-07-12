@@ -14,5 +14,6 @@ class ShopcarControllers extends CI_Controller {
         $data['shop'] = $this->shopcarModels->getShopingcardata();
         //添加名为:view的类库，将$data数据发送到news.php文件:
 		$this->load->view('shopcar',$data);
+
 	}
 }

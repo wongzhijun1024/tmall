@@ -73,10 +73,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="search-bar pr">
             <form  method="post" id="searchform">
                 <input id="searchInput"   type="text" placeholder="搜索"  >
-                <input id="ai-topsearch"  value="搜索" index="1" type="button" onclick="submit1()">
+                <input id="ai-topsearch"  value="搜索" index="1" type="button" onclick="submit12()">
             </form>
         </div>
     </div>
+    <script>
+        function submit12() {
+            var url = "<?php echo site_url('homecontrollers/search')?>";
+            window.location.href = url;
+        }
+
+    </script>
 
     <div class="clear"></div>
 </div>

@@ -381,7 +381,7 @@
                                       },
                 success:function () {
                     var url = "<?php echo site_url('shopingcarController')?>";
-                    //window.location.href = url;
+                    window.location.href = url;
                 }
             })
 

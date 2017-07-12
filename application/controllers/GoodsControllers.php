@@ -9,17 +9,17 @@ class GoodsControllers extends CI_Controller {
 
     }
 
-    function getAjaxData(){
-        header('Access-Control-Allow-oRigin:*');
-        //1，从url地址里面取出参数  test
-
-        $value = $this->input->get_post('value');
-        echo $value;
-
-
-    }
+//    function getAjaxData(){
+//        header('Access-Control-Allow-oRigin:*');
+//        //1，从url地址里面取出参数  test
+//
+//        $value = $this->input->get_post('value');
+//        echo $value;
+//
+//
+//    }
 	 function index()
 	{
-		$this->load->view('goods');
+		$this->load->view('search');
 	}
 }
