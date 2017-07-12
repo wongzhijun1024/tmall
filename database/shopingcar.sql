@@ -39,7 +39,7 @@ CREATE TABLE `shopingcar` (
 --
 
 INSERT INTO `shopingcar` (`id`, `name`, `price`, `size`, `imgid`) VALUES
-(1, '雪之恋和风大福', '￥16.3', '132123122', 'produce1');
+(1, '雪之恋和风大福', '16.3', '132123122', '1');
 
 --
 -- Indexes for dumped tables
